@@ -7,433 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:400,800|Cinzel:900|Abril+Fatface|Ultra|Material+Icons"
     rel="stylesheet">
-  <style>
-    html,
-    body,
-    div,
-    span,
-    applet,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    abbr,
-    acronym,
-    address,
-    big,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    s,
-    samp,
-    small,
-    strike,
-    strong,
-    sub,
-    sup,
-    tt,
-    var,
-    b,
-    u,
-    i,
-    center,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    article,
-    aside,
-    canvas,
-    details,
-    embed,
-    figure,
-    figcaption,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    output,
-    ruby,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-    }
-
-    /* HTML5 display-role reset for older browsers */
-
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    section {
-      display: block;
-    }
-
-    body {
-      line-height: 1;
-    }
-
-    ol,
-    ul {
-      list-style: none;
-    }
-
-    blockquote,
-    q {
-      quotes: none;
-    }
-
-    blockquote:before,
-    blockquote:after,
-    q:before,
-    q:after {
-      content: '';
-      content: none;
-    }
-
-    table {
-      border-collapse: collapse;
-      border-spacing: 0;
-    }
-
-    /* apply a natural box layout model to all elements, but allowing components to change */
-
-    html {
-      box-sizing: border-box;
-    }
-
-    *,
-    *:before,
-    *:after {
-      box-sizing: inherit;
-    }
-  </style>
-
-
-  <!-- /////////////////////// reset -->
-  <!-- /////////////////////// mainstyles -->
-
-
-  <style>
-    body {
-      font-family: arial;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      /* min-height: 100vh; */
-    }
-
-    #navbar {
-      box-shadow: 0px 5px 5px #0000004a;
-    }
-
-
-    header {
-      display: flex;
-      flex-direction: row;
-      padding: .8em;
-      text-align: center;
-      font-size: 1.4em;
-      background-color: #fff;
-      color: #000;
-      position: fixed;
-      width: 100%;
-      transition: padding .3s;
-
-    }
-
-    @media (min-width: 1200px) {
-      .container {
-        display: grid;
-        grid-template-columns: 1fr 1190px 1fr;
-        /* grid-template-rows: auto 1fr auto; */
-      }
-      header {
-        display: grid;
-        grid-template-columns: 1fr 1190px 1fr;
-        grid-column: span 3;
-      }
-      section {
-        display: grid;
-        grid-template-columns: 1fr 1190px 1fr;
-        grid-column: span 3;
-      }
-    }
-
-    .splash {
-      grid-column: span 3;
-      max-height: 380px;
-      overflow: hidden;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    nav,
-    aside {
-      background-color: white;
-      /* rgb(197, 197, 197); */
-    }
-
-    section {
-      padding: 100px;
-      text-align: center;
-      font-size: 1.4em;
-      background-color: #373a48;
-      color: white;
-    }
-
-    h1 {
-      padding-top: .5em;
-      margin-bottom: 1em;
-      font-size: 1.3em;
-      font-weight: bold;
-    }
-
-    ul {
-      display: flex;
-      flex-direction: row;
-    }
-
-    li {
-      flex: 1;
-      display: inline;
-      font-family: 'Lora', serif;
-      font-weight: 700;
-      font-size: 17px;
-      margin-right: 15px;
-    }
-
-    @media (max-width: 801px) {
-      li {
-        font-size: 14px;
-      }
-    }
-
-    /* unvisited link */
-
-    /* visited link */
-
-    /* mouse over link */
-
-    /* selected link */
-
-    li>a,
-    li>a:visited,
-    li>a:hover,
-    li>a:active {
-      color: rgb(68, 79, 84);
-      letter-spacing: 1;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      image-orientation: from-image;
-      transition: -webkit-transform 0.1s ease;
-    }
-
-
-    img.expand {
-      -webkit-transform: scale(2);
-      z-index: 2;
-    }
-
-    .expand-z-index {
-      z-index: 2;
-    }
-
-    header.fix-navbar {
-      padding: 5px;
-    }
-
-    .pull-left {
-      float: left;
-    }
-
-    .pull-right {
-      float: right;
-    }
-
-    .nav-wrapper-row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-
-    .flex-wrapper-row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 801px) {
-      .flex-wrapper-row {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-
-    .space-between {
-      justify-content: space-between;
-    }
-    .space-evenly {
-      justify-content: space-evenly;
-    }
-
-    .flex1 {
-      flex: 1;
-    }
-
-    .jason {
-      flex: 1 1 300px;
-      text-align: left;
-      line-height: 30px;
-      margin-left: 20px;
-    }
-
-    @media (max-width: 801px) {
-      .jason {
-        font-size: 18px;
-      }
-    }
-
-    .nav-item {
-      flex: 1;
-      align-self: flex-end;
-      margin-bottom: 8px;
-    }
-
-    .service-item {
-      flex: 0 1 calc(33% - 25px);
-      margin: 12px;
-      /* background-color: rgba(0, 0, 0, 0.12); */
-    }    
-    @media (max-width: 801px) {
-      .service-item {
-        flex: 0 1 0;
-        margin: 12px;
-        /* background-color: rgba(0, 0, 0, 0.12); */
-      }   
-    }
-
-    .service {
-      padding: 15px;
-    }
-
-    .service>h2 {      
-      color: rgb(255, 98, 71);
-      background-color: rgba(0, 0, 0, 0.05);
-      padding: 40px;
-      font-size: 1.2em;
-      letter-spacing: 1px;
-      line-height: 40px;
-    }
-
-    /* @media (max-width: 415px) {
-      .service {
-        width: 300px;
-      }
-    } */
-
-    .anchor {
-      position: relative;
-    }
-
-    .anchor> :first-child {
-      position: absolute;
-      top: -50px;
-    }
-
-    .logo1 {
-      /* font-family: 'Montserrat', sans-serif; */
-      letter-spacing: 2;
-      font-family: 'Ultra', serif;
-      letter-spacing: 5px;
-      font-weight: 400;
-      font-size: 24px;
-      color: #ff5947;
-    }
-
-    .logo2 {
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 2;
-      font-size: 17px;
-    }
-
-    #modal {
-      background-color: rgba(0, 0, 0, 0.4);
-      width: 100vw;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      display: none;
-    }
-
-    .show {
-      display: block !important;
-    }
-
-    .justify-center {
-      justify-content: center;
-    }
-    .align-center{
-      align-items: center;
-    }
-
-    footer {
-      padding: 30px;
-    }
-  </style>
+  
+	<link href="lightbox.css" rel="stylesheet" title="main-css">
+	<link href="style.css" rel="stylesheet" title="main-css">
 </head>
 
 
@@ -477,61 +53,62 @@
       take pride in every project we do, large or small. With Rycon you can be sure your project will be completed with precision,
       in a timely manner, and on budget. No surprises just a beautiful process as you make your space into a home for your
       family and friends. As a master carpenter of 25 years we focus on quality.</p>
+    <div style="margin-top: 50px"></div>
     <span class="anchor">
       <a id="Services"></a>
     </span>
     <h1>Services</h1>
     <div class="flex-wrapper-row">
-      <div class="service-item">
+      <div class="service-item leftReveal">
         <div class="service">
           <h2>CUSTOM FRAMING</h2>
         </div>
       </div>
-      <div class="service-item">
+      <div class="service-item topReveal">
         <div class="service">
           <h2>CUSTOM CARPENTRY</h2>
         </div>
       </div>
-      <div class="service-item">
+      <div class="service-item rightReveal">
         <div class="service">
           <h2>CUSTOM DECKS</h2>
         </div>
       </div>
     </div>
     <div class="flex-wrapper-row">
-      <div class="service-item">
+      <div class="service-item leftReveal">
         <div class="service">
           <h2>TIMBER FRAME WORK</h2>
         </div>
       </div>
-      <div class="service-item">
+      <div class="service-item topReveal">
         <div class="service">
           <h2>WINDOW INSTALLATION</h2>
         </div>
       </div>
-      <div class="service-item">
+      <div class="service-item rightReveal">
         <div class="service">
           <h2>SIDING</h2>
         </div>
       </div>
     </div>
     <div class="flex-wrapper-row justify-center">
-      <div class="service-item">
+      <div class="service-item leftReveal">
         <div class="service">
           <h2>HOUSE REMODEL</h2>
         </div>
       </div>
-      <div class="service-item">
+      <div class="service-item topReveal">
         <div class="service">
           <h2>KITCHEN REMODEL</h2>
         </div>
       </div>
-      <div class="service-item">
+      <div class="service-item rightReveal">
         <div class="service">
           <h2>BATHROOM REMODEL</h2>
         </div>
       </div>
-      <div class="service-item">
+      <div class="service-item bottomReveal">
         <div class="service">
           <h2>INTERIOR FINISH CARPENTRY</h2>
         </div>
@@ -543,133 +120,133 @@
     <h1>Work</h1>
     <div class="flex-wrapper-row justify-center">
       <div class="service-item">
-        <img src="img/1.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/1_thumbnail.jpg" data-image-opened="img/portfolio/1.jpg"/>
       </div>
       <div class="service-item">
-        <img src="img/2.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/2_thumbnail.jpg" data-image-opened="img/portfolio/2.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/3.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/3_thumbnail.jpg" data-image-opened="img/portfolio/3.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/4.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/4_thumbnail.jpg" data-image-opened="img/portfolio/4.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/5.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/5_thumbnail.jpg" data-image-opened="img/portfolio/5.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/6.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/6_thumbnail.jpg" data-image-opened="img/portfolio/6.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/7.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/7_thumbnail.jpg" data-image-opened="img/portfolio/7.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/8.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/8_thumbnail.jpg" data-image-opened="img/portfolio/8.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/9.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/9_thumbnail.jpg" data-image-opened="img/portfolio/9.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/10.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/10_thumbnail.jpg" data-image-opened="img/portfolio/10.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/11.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/11_thumbnail.jpg" data-image-opened="img/portfolio/11.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/12.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/12_thumbnail.jpg" data-image-opened="img/portfolio/12.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/13.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/13_thumbnail.jpg" data-image-opened="img/portfolio/13.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/14.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/14_thumbnail.jpg" data-image-opened="img/portfolio/14.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/15.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/15_thumbnail.jpg" data-image-opened="img/portfolio/15.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/16.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/16_thumbnail.jpg" data-image-opened="img/portfolio/16.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/17.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/17_thumbnail.jpg" data-image-opened="img/portfolio/17.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/18.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/18_thumbnail.jpg" data-image-opened="img/portfolio/18.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/19.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/19_thumbnail.jpg" data-image-opened="img/portfolio/19.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/20.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/20_thumbnail.jpg" data-image-opened="img/portfolio/20.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/21.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/21_thumbnail.jpg" data-image-opened="img/portfolio/21.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/22.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/22_thumbnail.jpg" data-image-opened="img/portfolio/22.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/23.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/23_thumbnail.jpg" data-image-opened="img/portfolio/23.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/24.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/24_thumbnail.jpg" data-image-opened="img/portfolio/24.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/25.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/25_thumbnail.jpg" data-image-opened="img/portfolio/25.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/26.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/26_thumbnail.jpg" data-image-opened="img/portfolio/26.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/27.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/27_thumbnail.jpg" data-image-opened="img/portfolio/27.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/28.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/28_thumbnail.jpg" data-image-opened="img/portfolio/28.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/29.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/29_thumbnail.jpg" data-image-opened="img/portfolio/29.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/30.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/30_thumbnail.jpg" data-image-opened="img/portfolio/30.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/31.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/31_thumbnail.jpg" data-image-opened="img/portfolio/31.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/32.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/32_thumbnail.jpg" data-image-opened="img/portfolio/32.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/33.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/33_thumbnail.jpg" data-image-opened="img/portfolio/33.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/vert1.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/vert1_thumbnail.jpg" data-image-opened="img/portfolio/vert1.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/vert2.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/vert2_thumbnail.jpg" data-image-opened="img/portfolio/vert2.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/vert3.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/vert3_thumbnail.jpg" data-image-opened="img/portfolio/vert3.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/vert4.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/vert4_thumbnail.jpg" data-image-opened="img/portfolio/vert4.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/vert7.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/vert7_thumbnail.jpg" data-image-opened="img/portfolio/vert7.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/vert8.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/vert8_thumbnail.jpg" data-image-opened="img/portfolio/vert8.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/vert5.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/vert5_thumbnail.jpg" data-image-opened="img/portfolio/vert5.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/vert10.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/vert10_thumbnail.jpg" data-image-opened="img/portfolio/vert10.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/vert6.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/vert6_thumbnail.jpg" data-image-opened="img/portfolio/vert6.jpg" />
       </div>
       <div class="service-item">
-        <img src="img/vert9.jpg" onClick="toggleExpand(this)" />
+        <img class="enableLightbox" src="img/portfolio/thumbnails/vert9_thumbnail.jpg" data-image-opened="img/portfolio/vert9.jpg" />
       </div>
 
       <div id="modal" onClick="removeExpands(this)"> </div>
@@ -695,44 +272,13 @@
   <footer>
   </footer>
 
-  <script>
-    var navbar = document.getElementById("navbar");
-    var offsetTop = navbar.offsetTop;
 
-    window.onscroll = function (e) {
-      var pageYOffset = window.pageYOffset;
-      if (pageYOffset >= 58) {
-        navbar.classList.add('fix-navbar');
-      } else {
-        navbar.classList.remove('fix-navbar');
-      }
-    };
-    function toggleExpand(elem) {
-      var elems = document.getElementsByClassName('expand')
-      if (elems.length > 0) {
-        // Sanity check to loop over everything and remove all expansions.        
-        console.log('this shouldnt happen');
-        var modal = document.getElementById('modal');
-        removeExpands(modal);
-      } else {
-        elem.classList.add('expand');
-        elem.parentElement.classList.add('expand-z-index');
-        var modal = document.getElementById('modal');
-        modal.classList.add('show')
-      }
-    }
-    function removeExpands(elem) {
-      console.log('removeexpands');
-      var elems = document.getElementsByClassName('expand')
-      if (elems.length > 0) {
-        for (let e of elems) {
-          e.classList.remove('expand');
-          e.parentElement.classList.remove('expand-z-index');
-        };
-      }
-      elem.classList.remove('show');
-    }
-  </script>
+  <script type="text/javascript" src="lib/scrollreveal.min.js"></script>
+  <script type="text/javascript" src="lib/mini-lightbox.min.js"></script>
+
+  <!-- Make sure to load main.js after dependencies -->
+  <script type="text/javascript" src="main.js"></script>
+  
 </body>
 
 </html>
