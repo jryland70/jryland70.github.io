@@ -218,6 +218,12 @@ section {
   background-color: #373a48;
   color: white;
 }
+@media (max-width: 801px) {
+  section {
+    padding: 15px;  
+    font-size: 1.1em;
+  }
+}
 
 h1 {
   font-family: 'Montserrat', sans-serif;
@@ -347,7 +353,7 @@ header.fix-navbar {
   flex: 0 1 calc(33% - 25px);
   margin: 12px;
   /* background-color: rgba(0, 0, 0, 0.12); */
-}    
+}
 @media (max-width: 801px) {
   .service-item {
     flex: 0 1 0;
@@ -398,6 +404,12 @@ header.fix-navbar {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 2;
   font-size: 17px;
+}
+@media (max-width: 801px) {
+  .logo2 {
+    font-size: 12px;
+    margin-left: 35px;
+  }   
 }
 
 #modal {
